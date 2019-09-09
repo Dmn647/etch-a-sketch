@@ -1,11 +1,17 @@
 const screen = document.querySelector("#screen");
-let btn = document.querySelector("#size");
+let size = document.querySelector("#size");
+let clear = document.querySelector("#clear");
 let numSquares = 16;
 
-function createGrid() {
+clear.addEventListener("click", clearGrid);
+size.addEventListener("click", newGrid);
+
+function createGrid(numSquares) {
   for (let i = 0; i < numSquares * numSquares; i++) {
     let box = document.createElement("div");
     box.classList.add("grid");
+    box.style.height = 1000 / numSquares + "px";
+    box.style.width = 1000 / numSquares + "px";
     box.addEventListener("mouseover", function(e) {
       e.target.style.background = "blue";
     });
@@ -38,4 +44,4 @@ function newGrid() {
   }
 }
 
-createGrid();
+createGrid(numSquares);

@@ -1,14 +1,13 @@
 .screen {
-  display: grid;
-  grid-template: repeat(16, 1fr) / repeat(16, 1fr);
-  grid-column-gap: 1px;
-  grid-row-gap: 1px;
-  width: 960px;
-  height: 960px;
+  width: auto;
+  height: auto;
   margin: auto;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 .grid {
-  background: grey;
+  background: white;
+  border: 1px solid black;
+  display: inline-block;
+  float: left;
 }
